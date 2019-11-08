@@ -1,0 +1,17 @@
+<h1 className="logo logo-login">Send It!</h1>
+
+<form onSubmit={this.loginUser} className="login-form">
+  <div className="form-group">
+    <input type="text" className="form-control username-input login-input" id="username_login" name="username"
+      placeholder="Username" required />
+  </div>
+  <div className="form-group">
+    <input type="password" className="form-control login-input" id="password-login" name="password"
+      placeholder="Password" required />
+  </div>
+  <div className="login-btn text-center">
+    <button type="submit" className="registration-button btn-sytle-1 btn">Login</button>
+  </div>
+</form>
+
+<button className="create-account-button forgot-password btn btn-link disabled">Forgot Password?</button>
