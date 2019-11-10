@@ -2,7 +2,7 @@
 
 <ul className="sign-in-buttons">
   <li>
-    <button type="button" className="registration-button btn-sytle-1 btn">
+    <button [routerLink]="['/login']" type="button" className="registration-button btn-sytle-1 btn">
       Sign-in with Username
     </button>
   </li>
@@ -13,7 +13,7 @@
     </button>
   </li>
   <li>
-    <button type="button" className="create-account-button btn-sytle-1 btn btn-link">
+    <button [routerLink]="['/registration']" type="button" className="create-account-button btn-sytle-1 btn btn-link">
       Create New Account
     </button>
   </li>
