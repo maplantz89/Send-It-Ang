@@ -10,6 +10,17 @@ export class ClimbListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    return fetch(`http://localhost:8000/api/climbs/6`, {
+      method: 'GET', 
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+    .then(res => 
+      (!res.ok)
+      ? res.json().then(error => Promise.reject(error))
+      : res.json()
+      )
   }
 
 }

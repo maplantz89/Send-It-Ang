@@ -1,0 +1,31 @@
+$SendItGreen: #62A892;
+
+.logo-background-login{
+  margin-top: -50px;
+  height: 365px;
+  width: 100%;
+  background-image: url("../../assets/images/topimg@2x.png");
+  background-repeat: no-repeat;
+  background-position: 0% -175px;
+  .logo{
+    padding-top: 100px;
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+  }
+}
+
+form.login-form{
+  padding: 0 35px;
+  input.login-input{
+    border: none;
+    border-bottom: 1px solid $SendItGreen;
+    font-size: 14px;
+  }
+  input.username-input{
+    margin-bottom: 35px;
+  }
+  .login-buttons{
+    padding-top: 20px;
+  }
+}

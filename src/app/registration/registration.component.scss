@@ -1,0 +1,35 @@
+$SendItGreen: #62A892;
+
+.logo-background-create{
+  margin-top: -50px;
+  height: 290px;
+  width: 100%;
+  background-image: url("../../assets/images/topimg@2x.png");
+  background-repeat: no-repeat;
+  background-position: 0% -250px;
+  .logo{
+    padding-top: 100px;
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+  }
+}
+
+.registration-title{
+  color: $SendItGreen;
+  font-weight: 900;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+form.registration-form{
+  padding: 0 35px;
+  input.register-input{
+    border: none;
+    border-bottom: 1px solid $SendItGreen;
+    font-size: 14px;
+  }
+  input.email-input{
+    margin: 35px 0;
+  }
+}

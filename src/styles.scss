@@ -1,4 +1,21 @@
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+$SendItGreen: #62A892;
+
 html, body {
   margin:0;
   padding: 0;
-}/* You can add global styles to this file, and also import other style files */
+}
+
+body{
+  font-family: "Lato";
+}
+
+.btn-style-1{
+  background-color: $SendItGreen;
+  color: white;
+  border-radius: 30px;
+  width: 250px; 
+  height: 50px; 
+}

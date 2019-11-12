@@ -1,5 +1,13 @@
+$SendItGreen: #62A892;
+
 header.header-container {
+  background-color: $SendItGreen;
+  color: white;
   display: inline-block;
-  height: 50px;
+  height: 60px;
   padding-top: 15px;
+  .filter{
+    text-align: right;
+    padding-right: 25px; 
+  }
 }
