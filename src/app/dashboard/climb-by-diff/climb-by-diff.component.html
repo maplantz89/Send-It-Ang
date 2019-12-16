@@ -1,0 +1,9 @@
+<div class="card-body by-difficulty" *ngIf="allClimbs != null">
+  <h5 class="card-title text-center by-diff-title">Climbs by Difficulty</h5>
+  <ul>
+    <li *ngFor="let climb of allClimbs"><span>{{climb.difficulty}}</span>
+      <hr>
+    </li>
+  </ul>
+  <button class="btn btn-tap-to-view">Tap to view V6-V10</button>
+</div>

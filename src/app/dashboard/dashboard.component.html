@@ -1,23 +1,24 @@
 <div class="dashboard container">
-
-  <div class="highest-difficulty row">
-    <h3 class="data-title col-12">Highest Difficulty Sent</h3>
-    <p>
-      <span class="difficulty">V2</span>
-      <span class="location">location</span>
-      <span class="date">date</span>
-    </p>
+  <div class="row">
+    <div class="col-6">
+      <div class="card hightest-climb dash-card">
+        <app-highest-sent></app-highest-sent>
+      </div>
+      <div class="card last-climb dash-card">
+        <app-last-climb></app-last-climb>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card dash-card">
+        <app-climb-by-diff></app-climb-by-diff>
+      </div>
+    </div>
   </div>
-
-  <div class="total-projects row">
-    <h3 class="data-title col-12">Total Projects Completed</h3>
-    <ul>
-      <li>V1 27 projects</li>
-    </ul>
-  </div>
-
-  <div class="total-attempts row">
-    <h3 class="data-title col-12">Total Attempts</h3>
-    <p>3</p>
+  <div class="row">
+    <div class="col">
+      <div class="card dash-card">
+        <app-climb-by-attempt></app-climb-by-attempt>
+      </div>
+    </div>
   </div>
 </div>

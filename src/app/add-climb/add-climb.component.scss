@@ -2,14 +2,14 @@ $SendItGreen: #62A892;
 
 form.add-climb-form{
   color: $SendItGreen;
-  padding: 30px 40px; 
+  padding: 20px 40px; 
   input.add-input{
     border: none;
     border-bottom: 1px solid $SendItGreen;
     font-size: 14px;
   }
   .attempts{
-    padding-top: 5px;
+    padding: 15px 0;
     font-size: 2em;
     font-weight: bold;
     button.attempt-btn{
@@ -18,6 +18,6 @@ form.add-climb-form{
     }
   }
   button.submit-climb-btn{
-    margin-top: 15px; 
+    margin-top: 35px; 
   }
 }

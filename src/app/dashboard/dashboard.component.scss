@@ -1,10 +1,15 @@
 $SendItGreen: #62A892;
 
 .dashboard{
-  padding: 20px; 
-  .data-title{
-    color: rgb(104, 102, 102);
-    font-size: .9em;
+  background-color: $SendItGreen;
+  padding-top: 15px;
+  .hightest-climb{
+    background-color: purple;
+  }
+  .dash-card{
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+    border-radius: 10px;
   }
 }
 

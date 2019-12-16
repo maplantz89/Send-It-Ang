@@ -1,7 +1,14 @@
 <header class="header-container container">
   <div class="row">
     <div class="col-4">
-      <i class="fa fa-bars"></i>
+      <mat-sidenav-container class="side-menu-container">
+        <mat-sidenav #sidenav mode="side">
+          Logout
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <p><button mat-button (click)="sidenav.toggle()"><i class="fa fa-bars side-menu-icon"></i></button></p>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
     </div>
     <div class="col-4">
       page name

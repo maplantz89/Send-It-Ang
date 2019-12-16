@@ -6,6 +6,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddClimbComponent } from './add-climb/add-climb.component';
 import { ClimbListComponent } from './climb-list/climb-list.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ClimbDetailComponent } from './climb-list/climb-detail/climb-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// import { AuthGuard } from './auth-guard-service';
 
 
 const routes: Routes = [
@@ -16,33 +19,41 @@ const routes: Routes = [
   },
   {
     path: 'landing',
-    pathMatch: 'full',
     component: LandingPageComponent
   },
   {
     path: 'login',
-    pathMatch: 'full',
     component: LoginComponent
   },
   {
     path: 'registration',
-    pathMatch: 'full',
     component: RegistrationComponent  
   },
   {
     path: 'dashboard',
-    pathMatch: 'full', 
-    component: DashboardComponent
+    component: DashboardComponent,
+    // will not allow unless logged in
+    // canActivate: [AuthGuard]
   },
   {
     path: 'add-climb',
-    pathMatch: 'full', 
     component: AddClimbComponent
   },
   {
     path: 'climb-list',
-    pathMatch: 'full', 
     component: ClimbListComponent
+  },
+  {
+    path: 'climb-list/:id',
+    component: ClimbDetailComponent
+  },
+  {
+    path: 'not-found',
+    component: PageNotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/not-found'
   }
 ];
 

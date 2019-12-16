@@ -1,11 +1,10 @@
 <div>
   <input class="filter-list" placeholder="No active filters..." />
   <ul class="climb-list">
-    <li class="climb-item">
-      <span class="difficulty col">V4</span>
-      <span class="location"> location </span>
-      <span class="attempts"> Attempts </span>
-      <span class="date"> date </span>
-    </li>
+    <app-climb-list-item
+    *ngFor="let climb of allClimbs; let i = index" 
+    [climb]="climb"
+    [index]="climb.id">
+    </app-climb-list-item>
   </ul>
 </div>

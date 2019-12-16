@@ -1,0 +1,27 @@
+.highest-climb-card{
+  color: white; 
+  h5.highest-climb-title{
+    font-size: .9em;
+    font-weight: 900;
+  }
+  h3.highest-climb-subtitle{
+    font-size: 3.5em;
+    font-weight: 900;
+    margin-bottom: 0px;
+  }
+  p.highest-climb-text-location{
+    font-size: .9em;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+  p.highest-climb-text-date{
+    font-size: .9em;
+    margin-bottom: 0;
+  }
+  button.btn-tap-to-view{
+    font-style: italic;
+    font-size: .7em;
+    color: white;
+    padding: 0;
+  }
+}

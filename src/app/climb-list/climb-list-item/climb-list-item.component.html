@@ -1,0 +1,16 @@
+<li (click)="onClimbSelect()">
+  <i class="fa fa-star col-1 favorite-climb"></i>
+
+  <span class="difficulty col-2" 
+    [ngClass]="'diff-' + climb.difficulty">
+    V{{climb.difficulty}}
+  </span>
+
+  <span class="location col-8">
+    {{climb.location}}
+    {{climb.date | date: 'shortDate'}} 
+  </span>
+
+  <span class="attempts col-4"> {{climb.attempts}} Attempt(s)</span>
+  <hr>
+</li>

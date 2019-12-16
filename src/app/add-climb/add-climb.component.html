@@ -1,20 +1,13 @@
 <form class="add-climb-form">
   <div class="form-group">
-    <label>Difficulty</label>
-    <select class="form-control add-input">
-      <option>V0</option>
-      <option>V1</option>
-      <option>V2</option>
-      <option>V3</option>
-      <option>V4</option>
-      <option>V5</option>
-      <option>V6</option>
-      <option>V7</option>
-      <option>V8</option>
-      <option>V9</option>
-      <option>V10+</option>
+    <label>Difficulty</label> 
+    <select class="form-control add-input" >
+      <option *ngFor="let difficulty of difficulties" [value]="difficulty.value">
+        {{difficulty.difficulty}}
+      </option>
     </select>
   </div>
+
   <div class="form-group">
     <label>Date</label>
     <input type="text" class="form-control add-input" id="difficulty" />
@@ -26,11 +19,11 @@
   <div class="attempts text-center">
     Attempts
     <div class="change-attempts">
-      <button class="attempt-btn btn"> < </button>
-      1
-      <button class="attempt-btn btn"> > </button>
+      <button (click)="onDecrement()" type="button" class="attempt-btn btn">
+        < </button> {{attempts}} <button type="button" (click)="onIncrement()" class="attempt-btn btn"> >
+      </button>
     </div>
     Nailed It!
-    <button type="button" class="btn-style-1 submit-climb-btn btn">Submit Climb</button>
+    <button type="submit" (click)="onSubmitClimb($event)" class="btn-style-1 submit-climb-btn btn">Submit Climb</button>
   </div>
 </form>

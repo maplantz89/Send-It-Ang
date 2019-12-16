@@ -1,0 +1,11 @@
+<div class="card-body" *ngIf="lastClimb != null">
+    <div class="row no-gutters">
+      <div class="col-7">
+        <h5 class="card-title last-climb-title">Last Climb Recorded</h5>
+        <button class="btn btn-tap-to-view">Tap to view</button>
+      </div>
+      <div class="col-5">
+        <p class="card-text last-climb-text">V{{lastClimb['difficulty']}}</p>
+      </div>
+    </div>
+  </div>

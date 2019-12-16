@@ -6,6 +6,17 @@ header.header-container {
   display: inline-block;
   height: 60px;
   padding-top: 15px;
+  .side-menu-container {
+    position: absolute;
+    background-color: $SendItGreen;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    .side-menu-icon{
+      color: white;
+    }
+  }
   .filter{
     text-align: right;
     padding-right: 25px; 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClimbsListServiceService } from '../services/climbs-list-service.service';
+import { Difficulty } from '../models/difficulty.model';
 
 @Component({
   selector: 'app-add-climb',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-climb.component.scss']
 })
 export class AddClimbComponent implements OnInit {
+  attempts: number = 1;
+  difficulties: Difficulty[];
 
-  constructor() { }
+  constructor(private climbsServer: ClimbsListServiceService) { }
 
   ngOnInit() {
+    this.difficulties = this.climbsServer.difficulties;
   }
 
+  onDecrement() {
+    if (this.attempts > 0) {
+      this.attempts--;
+    }
+  }
+  onIncrement() {
+    this.attempts++;
+  }
+
+  // submitClimbToServer
+  onSubmitClimb(data){
+    this.attempts
+  }
 }

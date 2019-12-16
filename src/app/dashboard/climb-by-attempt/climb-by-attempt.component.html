@@ -1,0 +1,15 @@
+<div class="card by-attempts" *ngIf="totalAttempts != null">
+    <div class="row">
+      <div class="col-4">
+        <button class="btn btn-light btn-diff" type="button">VB - V5</button>
+      </div>
+      <div class="col-4">
+        <span class="card-title graph-title text-center">Attempts</span>
+      </div>
+      <div class="col-4">
+          <button class="btn btn-light btn-diff" type="button">V6 - V10</button>
+      </div>
+    </div>
+    <small class="card-text text-center">{{totalAttempts['attempts']}} Total Attempts</small>
+    <app-graph></app-graph>
+  </div>
