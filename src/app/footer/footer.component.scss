@@ -1,7 +1,9 @@
 $SendItGreen: #62A892;
 
 .footer-containter{
+  background-color: white;
   position: fixed;
+  z-index: 999;
   bottom: 0;
   height: 60px;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);

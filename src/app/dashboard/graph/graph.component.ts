@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ClimbsListServiceService } from 'src/app/services/climbs-list-service.service';
-import { ClimbObservablesService } from 'src/app/services/observables/climb-observables.service';
 
 @Component({
   selector: 'app-graph',
@@ -9,15 +7,9 @@ import { ClimbObservablesService } from 'src/app/services/observables/climb-obse
 })
 export class GraphComponent implements OnInit {
   allClimbs: [] = null;
-
-  constructor(private climbsService: ClimbsListServiceService, 
-      private climbsObservableService: ClimbObservablesService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.climbsService.getAllClimbs(6)
-    this.climbsObservableService.allClimbs.subscribe(climbsList => {
-      climbsList ? this.allClimbs = climbsList : ''
-    });
   }
 
 }
