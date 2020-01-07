@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ClimbObservablesService } from './observables/climb-observables.service';
+import { Climb } from '../models/climb.model';
 
 
 @Injectable({
@@ -38,5 +39,10 @@ export class ClimbsListServiceService {
 
   getClimbById(climb_id: number){
     
+  }
+
+  submitClimb(climb: Climb, user_id: number){
+    console.log('in service posting');
+    return this.http.post<Climb>(`${this._baseUrl}/${user_id}`, climb)
   }
 }

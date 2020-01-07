@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ClimbsListServiceService } from '../services/climbs-list-service.service';
 import { Difficulty } from '../models/difficulty.model';
+import { Climb } from '../models/climb.model';
+import { visitAll } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-climb',
@@ -27,7 +29,14 @@ export class AddClimbComponent implements OnInit {
   }
 
   // submitClimbToServer
-  onSubmitClimb(data){
-    this.attempts
+  onSubmitClimb(data: Climb){
+    console.log(data);
+    const newClimb = {
+      attempts: this.attempts, 
+      location: 'Vital', 
+      favorite: true,
+      difficulty: 2
+      };
+    // this.climbsServer.submitClimb(newClimb, 2)
   }
 }
