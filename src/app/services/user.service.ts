@@ -7,6 +7,40 @@ import { UserObservablesService } from './observables/user-observables.service';
 })
 export class UserService {
 
+  users = [
+    {
+        id: 1,
+        username: 'Martha', 
+        email: 'martha@email.com',
+        password: 'password'
+    },
+    {
+        id: 2,
+        username: 'Aaron', 
+        email: 'aaron@email.com',
+        password: 'hubbie'
+    },
+    {
+        id: 3,
+        username: 'Graham', 
+        email: 'graham@email.com',
+        password: 'brother'
+    },
+    {
+        id: 4,
+        username: 'Mike', 
+        email: 'mike@email.com',
+        password: 'friend'
+    },
+    {
+        id: 5,
+        username: 'Gary', 
+        email: 'gary@email.com',
+        password: 'brother-in-law'
+    }
+]
+
+
   user: {} = null;
   private _baseUrl = 'http://localhost:8000/api';
   private _httpOptions = { 

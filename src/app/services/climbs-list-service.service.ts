@@ -24,6 +24,74 @@ export class ClimbsListServiceService {
     { difficulty: 'V10+', value: 10 }
   ]
 
+  climbs = [
+    {
+        user_id: 1, 
+        attempts: 2, 
+        location: 'Mesa Rim',
+        video: 'figure out',
+        favorite: true, 
+        difficulty: 0
+    },
+    {
+        user_id: 2, 
+        attempts: 4, 
+        location: 'Vital - Carlsbad',
+        video: 'figure out',
+        favorite: false, 
+        difficulty: 3
+    },
+    {
+        user_id: 3, 
+        attempts: 2, 
+        location: 'Mesa Rim',
+        video: 'figure out',
+        favorite: true, 
+        difficulty: 3
+    },
+    {
+        user_id: 1, 
+        attempts: 1, 
+        location: 'The Wall',
+        video: 'figure out',
+        favorite: false, 
+        difficulty: 4
+    },
+    {
+        user_id: 5, 
+        attempts: 5, 
+        location: 'Vital - Oceanside',
+        video: 'figure out',
+        favorite: true, 
+        difficulty: 1
+    },
+    {
+        user_id: 2, 
+        attempts: 3, 
+        location: 'Mesa Rim',
+        video: 'figure out',
+        favorite: false, 
+        difficulty: 0
+    },
+    {
+        user_id: 4, 
+        attempts: 2, 
+        location: 'Vital - Murrieta',
+        video: 'figure out',
+        favorite: true, 
+        difficulty: 3
+    },
+    {
+        user_id: 1, 
+        attempts: 6, 
+        location: 'Vertical Hold',
+        video: 'figure out',
+        favorite: true, 
+        difficulty: 5
+    },
+];
+
+
   constructor(private http: HttpClient, private climbObservableService: ClimbObservablesService) { }
 
   /**
