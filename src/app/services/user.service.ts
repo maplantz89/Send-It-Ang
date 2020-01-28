@@ -6,7 +6,6 @@ import { UserObservablesService } from './observables/user-observables.service';
   providedIn: 'root'
 })
 export class UserService {
-
   users = [
     {
         id: 1,
@@ -39,7 +38,6 @@ export class UserService {
         password: 'brother-in-law'
     }
 ]
-
 
   user: {} = null;
   private _baseUrl = 'http://localhost:8000/api';

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { ClimbsListServiceService } from '../services/climbs-list-service.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,13 +8,12 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-
   user: {} = null;
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.postUser({username: 'Momothecat', email: 'email234@email.com', password: 'Password098'})
+    // this.userService.postUser({username: 'Momothecat', email: 'email234@email.com', password: 'Password098'})
   }
 
 }

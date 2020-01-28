@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
 })
 export class ClimbListComponent implements OnInit {
 
-  allClimbs: [] = null;
+  allClimbs;
   user: {} = null;
   id: number = 1; 
 
@@ -21,11 +21,13 @@ export class ClimbListComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.climbsObservableService.allClimbs.subscribe(climbsList => {
-      climbsList ? this.allClimbs = climbsList : ''
-    });
+    this.allClimbs = this.climbsService.climbs;
 
-    this.climbsService.getAllClimbs(6)
+    // this.climbsObservableService.allClimbs.subscribe(climbsList => {
+    //   climbsList ? this.allClimbs = climbsList : ''
+    // });
+
+    // this.climbsService.getAllClimbs(6)
 
     // this.userObservableService.user.subscribe(user => {
     //   if (user !== null) {

@@ -8,13 +8,12 @@ import { ClimbListComponent } from './climb-list/climb-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ClimbDetailComponent } from './climb-list/climb-detail/climb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-// import { AuthGuard } from './auth-guard-service';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
@@ -32,8 +31,6 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    // will not allow unless logged in
-    // canActivate: [AuthGuard]
   },
   {
     path: 'add-climb',
