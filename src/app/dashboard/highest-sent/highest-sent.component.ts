@@ -15,10 +15,10 @@ export class HighestSentComponent implements OnInit {
     private dataObservableService: DataObservablesService) { }
 
   ngOnInit() {
-    this.dataService.getHighestDifficulty(6);
-    this.dataObservableService.highestDifficulty.subscribe(highestDifficulty => {
-      highestDifficulty ? this.highestDifficulty = highestDifficulty : ''
-    })
+    // this.dataService.getHighestDifficulty(6);
+    // this.dataObservableService.highestDifficulty.subscribe(highestDifficulty => {
+    //   highestDifficulty ? this.highestDifficulty = highestDifficulty : ''
+    // })
   }
 
 }

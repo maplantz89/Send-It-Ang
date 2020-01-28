@@ -9,7 +9,7 @@ import { Climb } from '../models/climb.model';
 })
 export class ClimbsListServiceService {
   private _baseUrl = 'http://localhost:8000/api/climbs';
-  
+
   difficulties = [
     { difficulty: 'VB', value: 0 },
     { difficulty: 'V1', value: 1 },
@@ -26,70 +26,78 @@ export class ClimbsListServiceService {
 
   climbs = [
     {
-        user_id: 1, 
-        attempts: 2, 
-        location: 'Mesa Rim',
-        video: 'figure out',
-        favorite: true, 
-        difficulty: 0
+      id: 0,
+      user_id: 1,
+      attempts: 2,
+      location: 'Mesa Rim',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 0
     },
     {
-        user_id: 2, 
-        attempts: 4, 
-        location: 'Vital - Carlsbad',
-        video: 'figure out',
-        favorite: false, 
-        difficulty: 3
+      id: 1,
+      user_id: 2,
+      attempts: 4,
+      location: 'Vital - Carlsbad',
+      video: 'figure out',
+      favorite: false,
+      difficulty: 3
     },
     {
-        user_id: 3, 
-        attempts: 2, 
-        location: 'Mesa Rim',
-        video: 'figure out',
-        favorite: true, 
-        difficulty: 3
+      id: 2,
+      user_id: 3,
+      attempts: 2,
+      location: 'Mesa Rim',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 3
     },
     {
-        user_id: 1, 
-        attempts: 1, 
-        location: 'The Wall',
-        video: 'figure out',
-        favorite: false, 
-        difficulty: 4
+      id: 3,
+      user_id: 1,
+      attempts: 1,
+      location: 'The Wall',
+      video: 'figure out',
+      favorite: false,
+      difficulty: 4
     },
     {
-        user_id: 5, 
-        attempts: 5, 
-        location: 'Vital - Oceanside',
-        video: 'figure out',
-        favorite: true, 
-        difficulty: 1
+      id: 4,
+      user_id: 5,
+      attempts: 5,
+      location: 'Vital - Oceanside',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 1
     },
     {
-        user_id: 2, 
-        attempts: 3, 
-        location: 'Mesa Rim',
-        video: 'figure out',
-        favorite: false, 
-        difficulty: 0
+      id: 5,
+      user_id: 2,
+      attempts: 3,
+      location: 'Mesa Rim',
+      video: 'figure out',
+      favorite: false,
+      difficulty: 0
     },
     {
-        user_id: 4, 
-        attempts: 2, 
-        location: 'Vital - Murrieta',
-        video: 'figure out',
-        favorite: true, 
-        difficulty: 3
+      id: 6,
+      user_id: 4,
+      attempts: 2,
+      location: 'Vital - Murrieta',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 3
     },
     {
-        user_id: 1, 
-        attempts: 6, 
-        location: 'Vertical Hold',
-        video: 'figure out',
-        favorite: true, 
-        difficulty: 5
+      id: 7,
+      user_id: 1,
+      attempts: 6,
+      location: 'Vertical Hold',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 5
     },
-];
+  ];
 
 
   constructor(private http: HttpClient, private climbObservableService: ClimbObservablesService) { }
@@ -105,11 +113,11 @@ export class ClimbsListServiceService {
       })
   }
 
-  getClimbById(climb_id: number){
-    
+  getClimbById(climb_id: number) {
+
   }
 
-  submitClimb(climb: Climb, user_id: number){
+  submitClimb(climb: Climb, user_id: number) {
     console.log('in service posting');
     return this.http.post<Climb>(`${this._baseUrl}/${user_id}`, climb)
   }

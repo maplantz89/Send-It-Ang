@@ -15,10 +15,10 @@ export class ClimbByAttemptComponent implements OnInit {
     private dataObservableService: DataObservablesService) { }
 
   ngOnInit() {
-    this.dataService.getTotalAttempts(6);
-    this.dataObservableService.totalAttempts.subscribe(totalAttempts => {
-      totalAttempts ? this.totalAttempts = totalAttempts : ''
-    })
+    // this.dataService.getTotalAttempts(6);
+    // this.dataObservableService.totalAttempts.subscribe(totalAttempts => {
+    //   totalAttempts ? this.totalAttempts = totalAttempts : ''
+    // })
   }
 
 }

@@ -14,10 +14,10 @@ export class LastClimbComponent implements OnInit {
     private dataObservableService: DataObservablesService) { }
 
   ngOnInit() {
-    this.dataService.getLastClimb(6);
-    this.dataObservableService.lastClimb.subscribe(lastClimb => {
-      lastClimb ? this.lastClimb = lastClimb : ''
-    })
+    // this.dataService.getLastClimb(6);
+    // this.dataObservableService.lastClimb.subscribe(lastClimb => {
+    //   lastClimb ? this.lastClimb = lastClimb : ''
+    // })
   }
 
 }
