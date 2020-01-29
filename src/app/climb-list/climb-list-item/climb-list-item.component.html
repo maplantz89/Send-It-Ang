@@ -1,5 +1,5 @@
 <li (click)="onClimbSelect()">
-  <i class="fa fa-star col-1 favorite-climb"></i>
+  <i class="fa fa-star col-1 favorite-climb" [class.favorite]="climb.favorite"></i>
 
   <span class="difficulty col-2" 
     [ngClass]="'diff-' + climb.difficulty">

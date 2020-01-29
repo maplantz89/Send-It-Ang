@@ -1,19 +1,12 @@
-<header class="header-container container">
+<header class="header-container col-12">
   <div class="row">
     <div class="col-4">
-      <mat-sidenav-container class="side-menu-container">
-        <mat-sidenav #sidenav mode="side">
-          Logout
-        </mat-sidenav>
-        <mat-sidenav-content>
-          <p><button mat-button (click)="sidenav.toggle()"><i class="fa fa-bars side-menu-icon"></i></button></p>
-        </mat-sidenav-content>
-      </mat-sidenav-container>
+      <i class="fa fa-bars side-menu-icon"></i>
     </div>
-    <div class="col-4">
-      page name
+    <div class="col-4 text-center">
+      {{pageTitle}}
     </div>
-    <div class="filter col-4">
+    <div class="col-4 text-right">
       <i class="fa fa-filter"></i>
     </div>
   </div>

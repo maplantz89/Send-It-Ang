@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonObservableService } from '../services/observables/common-observables.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  pageTitle;
+
+  constructor(private commonObservableService: CommonObservableService) { }
 
   ngOnInit() {
+    this.commonObservableService.pageTitle.subscribe(pageTitle => {
+      this.pageTitle = pageTitle;
+    })
   }
 
 }

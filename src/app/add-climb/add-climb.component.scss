@@ -18,6 +18,14 @@ form.add-climb-form{
     }
   }
   button.submit-climb-btn{
-    margin-top: 35px; 
+    margin-top: 35px;
+    padding: 0;
+  }
+}
+
+
+@media screen and (min-device-width: 640px){
+  form.add-climb-form{
+    padding: 50px 350px; 
   }
 }

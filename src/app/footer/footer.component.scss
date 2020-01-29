@@ -1,20 +1,18 @@
 $SendItGreen: #62A892;
 
-.footer-containter{
+.footer-containter {
   background-color: white;
   position: fixed;
   z-index: 999;
   bottom: 0;
   height: 60px;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
-  ul.footer-icons{
-    list-style: none;
-    padding: 10px 0px;
-    li{
+  padding: 0px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+  .icons{
+    padding-top: 10px; 
+    i.icon {
       font-size: 1.7em;
       display: inline;
-      padding: 0 40px;
-      text-align: center;
       color: $SendItGreen;
     }
   }

@@ -3,6 +3,7 @@ import { ClimbsListServiceService } from '../services/climbs-list-service.servic
 import { ClimbObservablesService } from '../services/observables/climb-observables.service';
 import { UserObservablesService } from '../services/observables/user-observables.service';
 import { UserService } from '../services/user.service';
+import { CommonObservableService } from '../services/observables/common-observables.service';
 
 @Component({
   selector: 'app-climb-list',
@@ -17,11 +18,15 @@ export class ClimbListComponent implements OnInit {
 
   constructor(private climbsService: ClimbsListServiceService,
     private climbsObservableService: ClimbObservablesService,
+    private commonObservableService: CommonObservableService
     // private userObservableService: UserObservablesService,
     ) { }
 
   ngOnInit() {
     this.allClimbs = this.climbsService.climbs;
+
+    this.commonObservableService.updateTitle('List');
+
     // this.climbsObservableService.allClimbs.subscribe(climbsList => {
     //   climbsList ? this.allClimbs = climbsList : ''
     // });

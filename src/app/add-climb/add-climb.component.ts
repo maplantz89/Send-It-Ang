@@ -3,6 +3,7 @@ import { ClimbsListServiceService } from '../services/climbs-list-service.servic
 import { Difficulty } from '../models/difficulty.model';
 import { Climb } from '../models/climb.model';
 import { visitAll } from '@angular/compiler';
+import { CommonObservableService } from '../services/observables/common-observables.service';
 
 @Component({
   selector: 'app-add-climb',
@@ -13,11 +14,12 @@ export class AddClimbComponent implements OnInit {
   attempts: number = 1;
   difficulties: Difficulty[];
 
-  constructor(private climbsServer: ClimbsListServiceService) { }
+  constructor(private climbsServer: ClimbsListServiceService, private commonObs: CommonObservableService) { }
 
   ngOnInit() {
     this.difficulties = this.climbsServer.difficulties;
-  }
+    this.commonObs.updateTitle('Add Climb')
+  } 
 
   onDecrement() {
     if (this.attempts > 0) {
