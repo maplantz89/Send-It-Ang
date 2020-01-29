@@ -8,9 +8,18 @@ import { DataObservablesService } from 'src/app/services/observables/data-observ
   styleUrls: ['./last-climb.component.scss']
 })
 export class LastClimbComponent implements OnInit {
-  lastClimb: {} = null;
+  lastClimb: {} =
+    {
+      id: 7,
+      user_id: 1,
+      attempts: 6,
+      location: 'Vertical Hold',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 5
+    };
 
-  constructor(private dataService: DataService, 
+  constructor(private dataService: DataService,
     private dataObservableService: DataObservablesService) { }
 
   ngOnInit() {

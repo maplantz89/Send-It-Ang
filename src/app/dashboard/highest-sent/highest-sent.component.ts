@@ -9,7 +9,16 @@ import { DataObservablesService } from '../../services/observables/data-observab
   styleUrls: ['./highest-sent.component.scss']
 })
 export class HighestSentComponent implements OnInit {
-  highestDifficulty: {} = null;
+  highestDifficulty: {} =
+    {
+      id: 7,
+      user_id: 1,
+      attempts: 6,
+      location: 'Vertical Hold',
+      video: 'figure out',
+      favorite: true,
+      difficulty: 5
+    };
 
   constructor(private dataService: DataService,
     private dataObservableService: DataObservablesService) { }

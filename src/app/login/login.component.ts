@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -13,5 +13,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     // this.userService.loginUser({username: 'Momothecat', password: 'Password098'})
   }
+
+  onLogin(input){
+    if(input.username === 'test' && input.password === 'password'){
+      //push to dashboard route
+    }
+  }
+
 
 }
